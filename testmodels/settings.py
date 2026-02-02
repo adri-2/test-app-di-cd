@@ -81,15 +81,24 @@ WSGI_APPLICATION = 'testmodels.wsgi.application'
 #     }
 # }
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': os.getenv('POSTGRES_DB'),
+#         'USER': os.getenv('POSTGRES_USER'),
+#         'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+#         'HOST':os.getenv('POSTGRES_HOST'),  # Nom du service docker-compose !
+#         'PORT': 5432,
+#     }
+# }
+
+# import os
+import dj_database_url  # pip install dj-database-url
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('POSTGRES_DB'),
-        'USER': os.getenv('POSTGRES_USER'),
-        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
-        'HOST':os.getenv('POSTGRES_HOST'),  # Nom du service docker-compose !
-        'PORT': 5432,
-    }
+    'default': dj_database_url.config(
+        default=os.getenv('DATABASE_URL', 'postgres://postgres:postgres@localhost:5432/test_db')
+    )
 }
 
 
