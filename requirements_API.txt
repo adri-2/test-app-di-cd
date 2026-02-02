@@ -1,0 +1,30 @@
+# 📦 DÉPENDANCES POUR LE PROJET API
+
+# Django et Django REST Framework
+Django>=5.0,<6.0
+djangorestframework>=3.14.0
+psycopg2-binary>=2.9.0  # Pour PostgreSQL
+
+# Filtrage et recherche
+django-filter>=23.0
+
+# Documentation Swagger/OpenAPI
+# drf-yasg>=1.21.7
+
+# CORS (si vous avez un frontend séparé)
+# django-cors-headers>=4.0.0
+
+# Gestion des images (Pillow pour ImageField)
+Pillow>=10.0.0
+
+# Tests et couverture de code
+# coverage>=7.0.0
+# factory-boy>=3.3.0  # Pour créer des données de test facilement
+
+# Outils de développement
+# django-debug-toolbar>=4.0.0
+# ipython>=8.0.0
+
+# Base de données (si vous n'utilisez pas SQLite)
+# psycopg2-binary>=2.9.0  # Pour PostgreSQL
+# mysqlclient>=2.1.0      # Pour MySQL
