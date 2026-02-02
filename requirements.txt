@@ -4,7 +4,7 @@
 Django>=5.0,<6.0
 djangorestframework>=3.14.0
 psycopg2-binary>=2.9.0  # Pour PostgreSQL
-
+dj_database_url
 # Filtrage et recherche
 django-filter>=23.0
 
